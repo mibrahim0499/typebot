@@ -11,6 +11,9 @@ importers:
       '@googleapis/calendar':
         specifier: ^9.5.0
         version: 9.5.0
+      axios:
+        specifier: ^1.6.5
+        version: 1.6.5
       googleapis:
         specifier: ^129.0.0
         version: 129.0.0
@@ -1271,6 +1274,24 @@ importers:
         specifier: 5.3.2
         version: 5.3.2
 
+  packages/forge/blocks/messenger:
+    devDependencies:
+      '@typebot.io/forge':
+        specifier: workspace:*
+        version: link:../../core
+      '@typebot.io/lib':
+        specifier: workspace:*
+        version: link:../../../lib
+      '@typebot.io/tsconfig':
+        specifier: workspace:*
+        version: link:../../../tsconfig
+      '@types/react':
+        specifier: 18.2.15
+        version: 18.2.15
+      typescript:
+        specifier: 5.3.2
+        version: 5.3.2
+
   packages/forge/blocks/openai:
     dependencies:
       ai:
@@ -1364,6 +1385,9 @@ importers:
       '@typebot.io/forge-repository':
         specifier: workspace:*
         version: link:../repository
+      '@typebot.io/messenger-block':
+        specifier: workspace:*
+        version: link:../blocks/messenger
       '@typebot.io/openai-block':
         specifier: workspace:*
         version: link:../blocks/openai
@@ -11960,6 +11984,16 @@ packages:
       - debug
     dev: false
 
+  /axios@1.6.5:
+    resolution: {integrity: sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==}
+    dependencies:
+      follow-redirects: 1.15.5
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query@3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
     dependencies:
@@ -15273,6 +15307,16 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+
+  /follow-redirects@1.15.5:
+    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
 
   /for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
